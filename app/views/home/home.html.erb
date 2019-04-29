@@ -1,3 +1,18 @@
 ```<h1>Welcome to the home page of The Gossip Project !</h1>
 <p>Want to know more about the team ? Click <a href="http://localhost:3000/static_pages/team">here</a></p></br>
 <p>Want to contact the team ? Click <a href="http://localhost:3000/static_pages/contact">here</a> to get their info</p>```
+
+<h1>Mon super site de gossip, depuis le dossier views !</h1>
+
+    <% @username.each_with_index do | gossip , index| %>
+      <p>
+          Son auteur : **
+        <%= gossip.author %>
+        <%= %>
+        **<br/>
+        Le contenu du potin : **
+        <%= gossip.content %>
+        **<br/>
+      </p>
+      <a href="/gossips/<%=index%>">Lien vers ce gossip</a><br/>
+    <% end %>
