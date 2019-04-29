@@ -1,9 +1,7 @@
 class HomeController < ApplicationController
   def home
-  end
 
-  def display_name
-  @username = User.find(params[:id])
+  @gossip = Gossip.all
   end
 
   def display_title
