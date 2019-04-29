@@ -1,7 +1,7 @@
 # Rails - The Gossip Project
 Created by Armony, Bano and Ayuma
 
-This app runs a proper website with links to different gossips and their authors.
+This awesome app runs a proper website with links to different gossips and their authors!
 
 Things you may want to install beforehand:
 
