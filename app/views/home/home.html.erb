@@ -1,19 +1,19 @@
 <h1>Welcome to the home page of The Gossip Project !</h1></br>
-<p>Want to know more about the team ? Click <a href="http://localhost:3000/team">here</a></p>
-<p>Want to contact the team ? Click <a href="http://localhost:3000/contact">here</a> to get their info</p>
+<p>Want to know more about the team ? Click <a href="/team">here</a></p>
+<p>Want to contact the team ? Click <a href="/contact">here</a> to get their info</p>
 
 <h1>All Gossips are here!</h1>
 
     <% @gossip.each_with_index do | gossip , index| %>
       <p>
-          Son auteur : **
+          Written by : 
         <%= gossip.user.first_name %>
         <%= %>
-        **<br/>
-        Le titre du potin : **
+        <br/>
+        Gossip : 
         <%= gossip.title %>
-        **<br/>
+        <br/>
       </p>
-      <a href="/gossip/<%=index + 1 %>">Lien vers ce gossip</a><br/>
+      <a href="/gossip/<%=index + 1 %>">See more</a><br/>
   </br>
     <% end %>
