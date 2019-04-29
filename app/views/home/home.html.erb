@@ -1,8 +1,8 @@
-<h1>Welcome to the home page of The Gossip Project !</h1>
-<p>Want to know more about the team ? Click <a href="http://localhost:3000/static_pages/team">here</a></p></br>
-<p>Want to contact the team ? Click <a href="http://localhost:3000/static_pages/contact">here</a> to get their info</p>
+<h1>Welcome to the home page of The Gossip Project !</h1></br>
+<p>Want to know more about the team ? Click <a href="http://localhost:3000/team">here</a></p>
+<p>Want to contact the team ? Click <a href="http://localhost:3000/contact">here</a> to get their info</p>
 
-<h1>Mon super site de gossip, depuis le dossier views !</h1>
+<h1>All Gossips are here!</h1>
 
     <% @gossip.each_with_index do | gossip , index| %>
       <p>
@@ -14,5 +14,6 @@
         <%= gossip.title %>
         **<br/>
       </p>
-      <a href="/gossips/<%=index%>">Lien vers ce gossip</a><br/>
+      <a href="/gossip/<%=index + 1 %>">Lien vers ce gossip</a><br/>
+  </br>
     <% end %>
