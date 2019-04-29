@@ -4,14 +4,14 @@
 
 <h1>Mon super site de gossip, depuis le dossier views !</h1>
 
-    <% @username.each_with_index do | gossip , index| %>
+    <% @gossip.each_with_index do | gossip , index| %>
       <p>
           Son auteur : **
-        <%= gossip.author %>
+        <%= gossip.user.first_name %>
         <%= %>
         **<br/>
-        Le contenu du potin : **
-        <%= gossip.content %>
+        Le titre du potin : **
+        <%= gossip.title %>
         **<br/>
       </p>
       <a href="/gossips/<%=index%>">Lien vers ce gossip</a><br/>
