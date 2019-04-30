@@ -1,7 +1,7 @@
 class GossipController < ApplicationController
 
   def gossip
-  @gossip = Gossip.find(params[:id])
+  #@gossip = Gossip.find(params[:id])
   end
 
   def new
@@ -10,13 +10,14 @@ class GossipController < ApplicationController
 
   def create
 
-  	@gossip = Gossip.create(gossip_params[:content])
+  	@gossip = Gossip.create(title: params[:title] , content: params[:content] , user_id: 2)
   	puts params
-  		if gossip.save
-  			redirect_to(home)
+  		if @gossip.save
+  			redirect_to '/home'
   		else 
   			render "new"
   		end
+
   end
 
   def gossip_params
