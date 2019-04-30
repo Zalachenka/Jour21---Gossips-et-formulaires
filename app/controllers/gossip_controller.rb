@@ -5,17 +5,20 @@ class GossipController < ApplicationController
   end
 
   def new
-  	@new = Gossip.new
+  	@gossip = Gossip.new
   end
 
   def create
 
   	@gossip = Gossip.create(title: params[:title] , content: params[:content] , user_id: 2)
   	puts params
-  		if @gossip.save
+ 
+  		if @gossip.valid?
   			redirect_to '/home'
-  		else 
-  			render "new"
+  		else
+  		 render "new"
+  			puts "Gossip is invalid"
+
   		end
 
   end
