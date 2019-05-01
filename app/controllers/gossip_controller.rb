@@ -24,7 +24,7 @@ class GossipController < ApplicationController
   end
 
   def gossip_params
-  gossip_params.require(:gossip).permit(:content)
+  gossip_params.require(:gossip).permit(:title, :content)
 end
 
 end
